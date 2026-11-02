@@ -1,0 +1,30 @@
+THE VIRTUAL ANSWER WEBSITE
+
+Open index.html to view the homepage. Each page is a separate HTML file. Keep all pages, site.css, site.js, logo/favicon files, and the assets folder together.
+
+Pages included:
+- index.html — Home
+- about.html — About TVA
+- services.html — Service overview
+- customer-support.html — Customer care details
+- lead-support.html — Lead and appointment support
+- admin-support.html — Back-office assistance
+- research-support.html — Research and records support
+- social-media.html — Social media assistance
+- how-it-works.html — Suggested inquiry and onboarding steps
+- industries.html — Example business contexts
+- team.html — Team photos (names and bios require approval)
+- resources.html — Delegation checklist
+- faq.html — Frequently asked questions
+- contact.html — Contact details
+
+Contact shown: nerleen.virtualconnect@gmail.com
+Location shown: Balayan, Batangas, Philippines
+
+Online stock images are saved in assets/web-*.jpg. They are illustrative Asian professional stock photos, not confirmed TVA staff portraits. Image details and source links are in assets/ONLINE-IMAGE-CREDITS.txt. The homepage, About page, and Team page each use different TVA-supplied team/community photos. Other Pexels people photos are illustrative stock and are not presented as TVA staff. Get permission from identifiable people before publishing those photos or adding names and roles.
+
+The DTI certificate supplied for this draft lists TVA Virtual Assistance Service as the registered business name. Business-name registration is not a substitute for permits required to operate. The website uses a short text note rather than displaying the certificate and its personal/business identifiers.
+
+Before publishing, ask the business owner to verify service descriptions, rates, schedules, privacy and security practices, and all business details.
+
+The site uses original page layouts and wording. It draws on general virtual-assistance service categories from the reference, without reusing the reference company’s design or copy.
