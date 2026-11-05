@@ -13,7 +13,6 @@ Pages included:
 - social-media.html — Social media assistance
 - how-it-works.html — Suggested inquiry and onboarding steps
 - industries.html — Example business contexts
-- team.html — Team photos (names and bios require approval)
 - resources.html — Delegation checklist
 - faq.html — Frequently asked questions
 - contact.html — Contact details
@@ -21,10 +20,12 @@ Pages included:
 Contact shown: nerleen.virtualconnect@gmail.com
 Location shown: Balayan, Batangas, Philippines
 
-Online stock images are saved in assets/web-*.jpg. They are illustrative Asian professional stock photos, not confirmed TVA staff portraits. Image details and source links are in assets/ONLINE-IMAGE-CREDITS.txt. The homepage, About page, and Team page each use different TVA-supplied team/community photos. Other Pexels people photos are illustrative stock and are not presented as TVA staff. Get permission from identifiable people before publishing those photos or adding names and roles.
+Online stock images are saved in assets/web-*.jpg. They are illustrative Asian professional stock photos, not confirmed TVA staff portraits. Image details and source links are in assets/ONLINE-IMAGE-CREDITS.txt. The homepage and About page use TVA-supplied team/community photos. The About page features CEO Nerleen Yabut and her video introduction. Other Pexels people photos are illustrative stock and are not presented as TVA staff. Get permission from identifiable people before publishing those photos or adding names and roles.
 
 The DTI certificate supplied for this draft lists TVA Virtual Assistance Service as the registered business name. Business-name registration is not a substitute for permits required to operate. The website uses a short text note rather than displaying the certificate and its personal/business identifiers.
 
 Before publishing, ask the business owner to verify service descriptions, rates, schedules, privacy and security practices, and all business details.
 
 The site uses original page layouts and wording. It draws on general virtual-assistance service categories from the reference, without reusing the reference company’s design or copy.
+
+SEO and Netlify files: Keep netlify.toml, sitemap.xml, and robots.txt in the published root with the HTML pages. The clean page URLs use Netlify Pretty URLs. After deployment, submit sitemap.xml in Google Search Console and Bing Webmaster Tools.

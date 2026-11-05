@@ -69,8 +69,9 @@ if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.new-card,.car
 (()=>{
   const page=document.body.dataset.page||location.pathname.split('/').pop().replace(/\.html?$/i,'')||'index';
   const section=['customer-support','lead-support','admin-support','research-support','social-media','social-media-support'].includes(page)?'services':page;
+  const current=section==='index'?'/':'/'+section+'/';
   document.querySelectorAll('.navlinks a[href]').forEach(a=>{
-    if(a.getAttribute('href')===section+'.html')a.setAttribute('aria-current','page');
+    if(new URL(a.href).pathname===current)a.setAttribute('aria-current','page');
   });
 })();
 
@@ -82,3 +83,6 @@ if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduc
  const photoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('photo-in');photoObserver.unobserve(entry.target);}}),{threshold:.14});
  document.querySelectorAll('main img:not(.brand-logo)').forEach(img=>photoObserver.observe(img));
 }
+
+/* Homepage testimonial carousel controls */
+(()=>{const root=document.querySelector('.testimonial-carousel');if(!root)return;const track=root.querySelector('.testimonial-track');const cards=[...track.querySelectorAll('.testimonial-card')];const prev=root.querySelector('.testimonial-prev');const next=root.querySelector('.testimonial-next');const page=root.querySelector('.testimonial-page');const fill=root.querySelector('.testimonial-progress i');let start=0;const perPage=()=>matchMedia('(max-width:680px)').matches?1:matchMedia('(max-width:900px)').matches?2:3;const draw=()=>{const n=perPage();const max=Math.max(0,cards.length-n);start=Math.min(start,max);const gap=parseFloat(getComputedStyle(track).gap)||0;const step=cards[0].getBoundingClientRect().width+gap;track.style.transform=`translateX(${-start*step}px)`;cards.forEach((card,i)=>card.setAttribute('aria-hidden',String(i<start||i>=start+n)));const total=Math.ceil(cards.length/n);const current=start===0?1:Math.ceil(start/n)+1;page.textContent=`${String(current).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;fill.style.width=`${current/total*100}%`;prev.disabled=start===0;next.disabled=start>=max};prev.addEventListener('click',()=>{start=Math.max(0,start-perPage());draw()});next.addEventListener('click',()=>{start=Math.min(cards.length-perPage(),start+perPage());draw()});root.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){start=Math.min(cards.length-perPage(),start+perPage());draw()}if(e.key==='ArrowLeft'){start=Math.max(0,start-perPage());draw()}});addEventListener('resize',draw);draw()})();
